@@ -82,7 +82,7 @@ android {
         minSdk = 21
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0.1"
+        versionName = "1.0.3"
 
         // ✅ فقط معماری‌های مورد نیاز برای خروجی سبک
         ndk {
@@ -101,8 +101,8 @@ android {
 
     signingConfigs {
         create("release") {
-//            storeFile = file("my-release-key.jks")
-            storeFile = file("my-release-key.jks")
+            git add android/app/build.gradle.kts
+            git rebase --continue = file("my-release-key.jks")
             keyAlias = "my-key-alias"
             storePassword = project.findProperty("KEYSTORE_PASSWORD") as String
             keyPassword = project.findProperty("KEY_PASSWORD") as String

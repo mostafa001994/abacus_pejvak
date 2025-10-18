@@ -34,6 +34,8 @@ dependencies:
   intl: ^0.18.1
   flutter_multi_formatter: ^2.6.3
   url_launcher: ^6.2.1
+  provider: ^6.1.1  # یا آخرین نسخه پایدار
+  shared_preferences: ^2.2.2  # یا آخرین نسخه پایدار
 
 
 dev_dependencies:
@@ -60,7 +62,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/logo.webp
+#    - assets/logo.webp
+    - assets/logo_dark.webp
+    - assets/logo_light.webp
 
   fonts:
     - family: irsans
